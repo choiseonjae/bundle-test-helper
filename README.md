@@ -1,2 +1,26 @@
-# bundle-test-helper
-server testing helper
+# bundle-test-helper  
+
+다날에서 큰 규모의 서버를 수정할 때, side effect를 확인하기 위해서 전체 api의 테스팅을 진행하도록 도와주는 프로그램  
+
+## 기능
+모든 기능은 중복 및 조합해서 적용될 수 있다.  
+하나의 api가 아닌 하나의 flow를 테스트하기 위한 여러 api test도 가능하다.  
+테스트는 테스트 파일.yml마다 thread가 생성되어 multi thread로 동작한다.  
+단일 테스트도 가능하며, 작성해놓은 모든 테스트 코드를 수행하는 것으로 수정사항에 대한 side effect를 확인하는 것이 가능하다.  
+성공뿐만 아니라 실패 테스트도 가능하다.
+
+### 암/복호화 통신 기능
+seed, rsa, aes256 암/복호화 가능  
+
+### 이전 response 추출 기능
+session key 등을 추출하여 다음 reqeust에서 사용가능하며, 이를 통해 세션을 유지한 api들을 테스트할 수 있다.
+
+### 문자열의 추가/수정/제거 기능
+문자열을 다양한 방법으로 수정하여 request의 파라미터로 넣을 수 있다.
+
+### 소켓 통신
+http통신으로 국한되지 않고, 다양한 통신의 테스팅이 가능하다.
+
+### DB check
+특정 api 호출 이후 DB에 정상적으로 insert 되었는지 혹은 delete 되었는지 체크 가능하다.
+
