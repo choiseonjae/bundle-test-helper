@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.co.danal.model.javafx.ServerSetter">
+  <tabs>
+    <Tab text="url">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="saveBtn" layoutX="441.0" layoutY="169.0" mnemonicParsing="false" onAction="#save" prefHeight="34.0" prefWidth="129.0" text="저장" />
+                  <ListView id="wordStyleList" fx:id="nameList" layoutX="14.0" layoutY="39.0" prefHeight="311.0" prefWidth="102.0" />
+                  <ListView id="wordStyleList" fx:id="urlList" layoutX="138.0" layoutY="39.0" prefHeight="311.0" prefWidth="286.0" />
+                  <Text layoutX="47.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NAME" wrappingWidth="35.12109375" />
+                  <Text layoutX="282.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="URL" textAlignment="CENTER" wrappingWidth="35.12109375" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Untitled Tab 2">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

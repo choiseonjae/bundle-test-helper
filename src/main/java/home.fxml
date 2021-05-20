@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.co.danal.application.Home">
+	<top>
+		<HBox prefHeight="29.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+			<children>
+				<MenuBar fx:id="menuBar" prefHeight="29.0" prefWidth="599.0">
+					<menus>
+						<Menu mnemonicParsing="false" text="Settings">
+							<items>
+								<MenuItem fx:id="testCaseFolder" mnemonicParsing="false" onAction="#clickTestCaseFolder" text="Test Case Folder" />
+								<MenuItem fx:id="yamlEditor" mnemonicParsing="false" onAction="#clickYamlEditor" text="Yaml Editor" />
+								<MenuItem mnemonicParsing="false" onAction="#openTextSettingBox" text="Text" />
+							</items>
+						</Menu>
+						<Menu mnemonicParsing="false" text="View">
+                     <items>
+                        <MenuItem fx:id="refresh" mnemonicParsing="false" onAction="#refresh" text="refresh" />
+                        <MenuItem fx:id="clear" mnemonicParsing="false" onAction="#clear" text="clear" />
+                     </items></Menu>
+						<Menu mnemonicParsing="false" text="Help">
+							<items>
+								<MenuItem fx:id="addTestCaseMethod" mnemonicParsing="false" onAction="#addTestCaseMethod" text="테스트 케이스 작성법" />
+								<MenuItem fx:id="runMethod" mnemonicParsing="false" onAction="#runMethod" text="테스트 실행 방법" />
+								<MenuItem fx:id="addServerMethod" mnemonicParsing="false" onAction="#addServerMethod" text="테스트할 서버 추가 방법" />
+							</items>
+						</Menu>
+					</menus>
+				</MenuBar>
+			</children>
+		</HBox>
+	</top>
+   <center>
+      <SplitPane dividerPositions="0.35" focusTraversable="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER_LEFT">
+        <items>
+      		<TreeView fx:id="testCaseTree" onKeyPressed="#typing" onMouseClicked="#clickEvent" prefHeight="369.0" prefWidth="239.0" />
+            <ScrollPane fx:id="logScrollPane" fitToHeight="true" fitToWidth="true" focusTraversable="false" hbarPolicy="NEVER" onKeyTyped="#typingLogBox" prefHeight="297.0" prefViewportHeight="369.0" prefViewportWidth="386.0" prefWidth="337.0" style="-fx-background-color: black;" vbarPolicy="ALWAYS" vvalue="1.0">
+               <content>
+      						<TextFlow fx:id="logBox" layoutX="1.0" layoutY="1.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onKeyTyped="#typingLogBox" prefHeight="291.0" prefWidth="250.0" style="-fx-text-fill: white; -fx-background-color: black;" />
+               </content>
+            </ScrollPane>
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>

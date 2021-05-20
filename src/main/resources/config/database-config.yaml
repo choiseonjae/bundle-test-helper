@@ -1,0 +1,23 @@
+TDB-LOG-TBILL : 
+ id : "tbtdb"
+ pwd : "tbtdb"
+ url : "jdbc:mysql://192.168.210.91:3306/"
+ database : "LOG"
+ table : "TBILL"
+ driver : "com.mysql.jdbc.Driver" # default 는 mysql
+ 
+TdbSession : 
+ id : tbtdb
+ pwd : tbtdb
+ database : TX
+ table : TSESSION
+ url : jdbc:mysql://192.168.210.91:3306/
+ driver : com.mysql.jdbc.Driver # default 는 mysql
+ 
+LgLogProtocol : 
+ id : lpy
+ pwd : tblpy
+ database : LOG
+ table : TB_LPY_PROTOCOL
+ url : jdbc:mysql://192.168.210.91:3306/
+   

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane focusTraversable="true" maxHeight="144.0" maxWidth="272.0" minHeight="144.0" minWidth="272.0" prefHeight="144.0" prefWidth="272.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kr.co.danal.model.javafx.WordColorChooser">
+   <children>
+      <ColorPicker fx:id="colorPicker" layoutX="23.0" layoutY="86.0" onAction="#changeColor" />
+      <Button fx:id="setWordStyle" layoutX="166.0" layoutY="86.0" mnemonicParsing="false" onAction="#setWordStyle" prefHeight="23.0" prefWidth="82.0" text="설정" />
+      <TextField fx:id="coloredWord" layoutX="23.0" layoutY="36.0" prefHeight="29.0" prefWidth="225.0" promptText="단어를 입력하세요." />
+   </children>
+</AnchorPane>
